@@ -4,12 +4,14 @@
     box-sizing: border-box;
 }
 
-html,
+
 body {
-    background-color: #333;
-    font-size: 14px;
-    /*min-height: 100vh;*/
-    /*padding: 15px;*/
+    background-color: #111;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    /*padding: 150px 0;*/
+    height: 100%;
+    overflow: hidden;
 }
 
 a {
@@ -18,64 +20,61 @@ a {
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
 }
 
-* img {
+img {
     max-width: 100%;
-    width: fit-content;
+    object-fit: cover;
 }
 
-.card {
-    background-color: greenyellow;
-    min-height: 200px;
-    border: 1px solid black;
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    font-size: 12px;
 }
 
 .slider-container {
-    padding: 100px 0 0;
-    position: relative;
-    margin: 0 auto;
-    width: 800px;
-    overflow: hidden;
+    max-width: 500px;
+    padding: 0 30px;
+    margin: 30px auto;
+    width: 100%;
 }
 
 .swiper-container {
-    margin-bottom: 50px;
-    /*position: relative;*/
     overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding-bottom: 30px;
 }
 
-.swiper-pagination-bullets {
-    /*bottom: -10px;*/
-    /*position: absolute;*/
+.card {
+    /*padding: 30px;*/
+    background-color: LawnGreen;
+    min-height: 150px;
+    color: #111;
+    font-size: 16px;
+    width: auto;
 }
 
-.swiper-pagination-bullet {
-    background-color: navy;
-    border-radius: inherit;
 
-}
 
-.swiper-pagination-bullet-active {
-    background-color: orangered;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    display: none;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: #fff;
     width: 40px;
     height: 40px;
-    background-color: #fff;
     border-radius: 100%;
-    opacity: .5;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: 20px 20px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
 }
 
 .swiper-button-prev {
@@ -93,15 +92,12 @@ ul {
     align-items: center;
     width: 100%;
     margin-bottom: 30px;
-    position: relative;
 }
 
 .slider-buttons {
+    position: relative;
+    width: 30%;
     display: flex;
-    align-items: center;
-    gap: 15px;
-    position: absolute;
-    bottom: -150px;
-    left: calc(50% - 47.5px)
+    /*gap: 15px;*/
 }
 

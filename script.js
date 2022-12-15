@@ -1,20 +1,27 @@
-const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 5,
+const slider = document.querySelector('.swiper-container');
+
+let mySwiper = new Swiper(slider, {
+    slidesPerView: 1,
     spaceBetween: 10,
+    loop: true,
     pagination: {
         el: '.swiper-pagination',
-        type:  'bullets',
-        clickable: true
+        clickable: true,
     },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    loop: true,
-    slidesPerGroup: 1,
-    slideToClickedSlide: true,
-    centeredSlides: true
+    lazy: true,
+    // breakpoints: {
+    //     '@0.00': {
+    //         slidesPerView: 1,
+    //     },
+    //     '@0.50': {
+    //         slidesPerView: 2,
+    //     },
+    //     '@1.00': {
+    //         slidesPerView: 4,
+    //     },
+    // }
 })
-
-const slider = document.querySelector('.swiper-container').swiper;
-
